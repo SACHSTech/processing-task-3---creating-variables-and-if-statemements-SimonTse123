@@ -24,6 +24,7 @@ public class Sketch extends PApplet {
   }
 
   public void setup() {
+
   // Colour of the background
     background(184, 211, 255);
 
@@ -31,7 +32,6 @@ public class Sketch extends PApplet {
    boolean colourChange1 = intRandom1X >= 30 && intRandom1Y >= 30;
     if (colourChange1) {
       background(171, 249, 255);
-
    }
   }
 
@@ -46,6 +46,7 @@ public class Sketch extends PApplet {
     strokeWeight (1);
     stroke (0);
     fill (235, 156, 255);
+    
   // Colour change 2
   boolean colourChange2 = intRandom2X >= 80 || intRandom2Y <= 20;
     if (colourChange2) {
