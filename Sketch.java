@@ -17,10 +17,10 @@ public class Sketch extends PApplet {
     size(600, 600);
 
   // Store random numbers
-  intRandom1X = myRandom.nextInt(100);
-  intRandom1Y = myRandom.nextInt(100);
-  intRandom2X = myRandom.nextInt(100);
-  intRandom2Y = myRandom.nextInt(100);
+  intRandom1X = myRandom.nextInt(200);
+  intRandom1Y = myRandom.nextInt(200);
+  intRandom2X = myRandom.nextInt(200);
+  intRandom2Y = myRandom.nextInt(200);
   }
 
   public void setup() {
@@ -28,21 +28,22 @@ public class Sketch extends PApplet {
   // Initial Colour of the background
     background(184, 211, 255);
 
-  // Colour change for backrgound
-   boolean colourChange1 = intRandom1X >= 30 && intRandom1Y >= 30;
-    if (colourChange1) {
-      background(171, 249, 255);
-   }
   }
 
   public void draw() {
-	  
+
+	  // Colour change for backrgound
+    boolean colourChange1 = intRandom1X >= 120 && intRandom1Y >= 130;
+    if (colourChange1) {
+      background(171, 249, 255);
+   }
+   
   // Initial Stem Colour
     strokeWeight (30);
     stroke (42, 130, 22);
 
   // Colour Change of the Stem
-  boolean colourchange4 = intRandom1Y >= 50;
+  boolean colourchange4 = intRandom1Y >= 100;
     if (colourchange4) {
 
       stroke (117, 255, 102);
@@ -56,7 +57,7 @@ public class Sketch extends PApplet {
     fill (235, 156, 255);
     
   // Variable Colour change of petals
-  boolean colourChange2 = intRandom2X >= 80 || intRandom2Y <= 20;
+  boolean colourChange2 = intRandom2X >= 170 || intRandom2Y <= 40;
     if (colourChange2) {
       fill (255, 169, 41);
   }
@@ -77,7 +78,7 @@ public class Sketch extends PApplet {
     fill( 255, 234, 0);
 
   // Colour Change of the sun
-  boolean colourChange3 = intRandom2X >50;
+  boolean colourChange3 = intRandom2X >100;
     if (colourChange3) {
       fill (255, 41, 134);
     }
@@ -94,8 +95,11 @@ public class Sketch extends PApplet {
     triangle(125 + intRandom1X, 115 + intRandom1Y, 115 + intRandom1X, 125 + intRandom1Y, 135 + intRandom1X, 135 + intRandom1Y);
 
   // Current Time
+    textSize(20);
+    text("Current Time: " + hour() + ":" + minute() + ":" + second(), 10, 50);
 
   
+
 
 
 
