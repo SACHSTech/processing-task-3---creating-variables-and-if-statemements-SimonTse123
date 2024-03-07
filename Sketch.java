@@ -33,10 +33,13 @@ public class Sketch extends PApplet {
   public void draw() {
 
 	  // Colour change for backrgound
-    boolean colourChange1 = intRandom1X >= 120 && intRandom1Y >= 130;
+    boolean colourChange1 = intRandom1X >= 90 && intRandom1Y >= 90;
     if (colourChange1) {
       background(171, 249, 255);
    }
+    else {
+      background(184, 211, 255);
+    }
    
   // Initial Stem Colour
     strokeWeight (30);
@@ -57,7 +60,7 @@ public class Sketch extends PApplet {
     fill (235, 156, 255);
     
   // Variable Colour change of petals
-  boolean colourChange2 = intRandom2X >= 170 || intRandom2Y <= 40;
+  boolean colourChange2 = intRandom2X >= 150 || intRandom2Y <= 50;
     if (colourChange2) {
       fill (255, 169, 41);
   }
@@ -94,7 +97,15 @@ public class Sketch extends PApplet {
     triangle(75 + intRandom1X, 115 + intRandom1Y, 85 + intRandom1X, 125 + intRandom1Y, 65 + intRandom1X, 135 + intRandom1Y) ;
     triangle(125 + intRandom1X, 115 + intRandom1Y, 115 + intRandom1X, 125 + intRandom1Y, 135 + intRandom1X, 135 + intRandom1Y);
 
-  // Current Time
+  // Current Time + colour
+    boolean colourChange5 = (int)second() % 2 <= 0; 
+    if (colourChange5) {
+      fill (57, 74, 189);
+    }
+    else {
+      fill (255, 0, 136);
+    }
+      
     textSize(20);
     text("Current Time: " + hour() + ":" + minute() + ":" + second(), 10, 50);
 
