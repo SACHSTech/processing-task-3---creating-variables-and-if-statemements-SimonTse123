@@ -25,7 +25,7 @@ public class Sketch extends PApplet {
 
   public void setup() {
 
-  // Colour of the background
+  // Initial Colour of the background
     background(184, 211, 255);
 
   // Colour change for backrgound
@@ -37,21 +37,31 @@ public class Sketch extends PApplet {
 
   public void draw() {
 	  
-  // Stem 
+  // Initial Stem Colour
     strokeWeight (30);
     stroke (42, 130, 22);
+
+  // Colour Change of the Stem
+  boolean colourchange4 = intRandom1Y >= 50;
+    if (colourchange4) {
+
+      stroke (117, 255, 102);
+    }
+  // Stem Position
     line (300 + intRandom2X,300 + intRandom2Y, 300 + intRandom2X, 550 + intRandom2Y);
 
-  // Petals
+  // Initial Petal Colour
     strokeWeight (1);
     stroke (0);
     fill (235, 156, 255);
     
-  // Colour change 2
+  // Variable Colour change of petals
   boolean colourChange2 = intRandom2X >= 80 || intRandom2Y <= 20;
     if (colourChange2) {
       fill (255, 169, 41);
   }
+
+  // Petal Positions
     ellipse (250 + intRandom2X, 250 + intRandom2Y, 100, 100); 
     ellipse (350 + intRandom2X, 350 + intRandom2Y, 100, 100);
     ellipse (250 + intRandom2X, 350 + intRandom2Y, 100, 100);
@@ -63,7 +73,7 @@ public class Sketch extends PApplet {
     fill( 255, 234, 0);
     ellipse(300 + intRandom2X, 300 + intRandom2Y, 100, 100);
 
-  // Sun
+  // Initial Colour of the Sun
     fill( 255, 234, 0);
 
   // Colour Change of the sun
@@ -71,6 +81,8 @@ public class Sketch extends PApplet {
     if (colourChange3) {
       fill (255, 41, 134);
     }
+
+  // Positioning of the sun
     ellipse(100 + intRandom1X, 100 + intRandom1Y, 50, 50);
     triangle(105 + intRandom1X, 130 + intRandom1Y, 95 + intRandom1X, 130 + intRandom1Y, 100 + intRandom1X, 150 + intRandom1Y);
     triangle(105 + intRandom1X, 70 + intRandom1Y, 95 + intRandom1X, 70 + intRandom1Y, 100 + intRandom1X, 50 + intRandom1Y);
@@ -80,6 +92,10 @@ public class Sketch extends PApplet {
     triangle(125 + intRandom1X, 85 + intRandom1Y, 115 + intRandom1X, 75 + intRandom1Y, 135 + intRandom1X, 65 + intRandom1Y);
     triangle(75 + intRandom1X, 115 + intRandom1Y, 85 + intRandom1X, 125 + intRandom1Y, 65 + intRandom1X, 135 + intRandom1Y) ;
     triangle(125 + intRandom1X, 115 + intRandom1Y, 115 + intRandom1X, 125 + intRandom1Y, 135 + intRandom1X, 135 + intRandom1Y);
+
+  // Current Time
+
+  
 
 
 
